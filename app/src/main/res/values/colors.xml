@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#009FE8</color>
+    <color name="white">#FFFFFF</color>
+    <color name="login_button">#2C74F4</color>
+    <color name="text">#484848</color>
+    <color name="cursor">#009FE8</color>
+    <color name="banner_bg">#4036A3</color>
+    <color name="detail_date_text">#B3FFFFFF</color>
+    <color name="detail_text">#CCFFFFFF</color>
+    <color name="detail_nav">#F01D1D1D</color>
+    <color name="detail_date_bg">#26FFFFFF</color>
+    <color name="detail_play_bg">#1AFFFFFF</color>
+    <color name="divider_color">#66AFAFAF</color>
+    <color name="black">#000000</color>
+    <color name="enable_false">#5E5E5E</color>
+</resources>

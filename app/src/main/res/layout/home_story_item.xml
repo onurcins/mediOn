@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<data>
+    <variable
+        name="homeStory"
+        type="com.onurcinstas.medion.model.home.HomeStoryItem" />
+</data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/storyLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/storyItemImage"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_marginStart="@dimen/cell_side_margin"
+            android:layout_marginEnd="@dimen/cell_side_margin"
+            android:downloadUrl="@{homeStory.image.small}"
+            android:scaleType="fitXY"
+            app:shapeAppearanceOverlay="@style/roundedImage"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <TextView
+            android:id="@+id/storyItemTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/cell_title_margin"
+            android:gravity="center"
+            android:text="@{String.valueOf(homeStory.name)}"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/storyItemSubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/cell_side_margin"
+            android:layout_marginEnd="@dimen/cell_side_margin"
+            android:gravity="center"
+            android:text="@{String.valueOf(homeStory.category)}"
+            android:textColor="@color/detail_text" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

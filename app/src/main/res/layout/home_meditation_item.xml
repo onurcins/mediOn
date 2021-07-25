@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<data>
+    <variable
+        name="homeMeditation"
+        type="com.onurcinstas.medion.model.home.HomeMeditationItem" />
+</data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/meditationLL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/meditationItemImage"
+            android:layout_width="150dp"
+            android:layout_height="225dp"
+            android:layout_marginStart="@dimen/cell_side_margin"
+            android:layout_marginEnd="@dimen/cell_side_margin"
+            android:downloadUrl="@{homeMeditation.image.small}"
+            android:scaleType="fitXY"
+            app:shapeAppearanceOverlay="@style/roundedImage"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <TextView
+            android:id="@+id/meditationItemTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/cell_title_margin"
+            android:gravity="center"
+            android:text="@{String.valueOf(homeMeditation.title)}"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/meditationItemSubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/cell_side_margin"
+            android:layout_marginEnd="@dimen/cell_side_margin"
+            android:gravity="center"
+            android:text="@{String.valueOf(homeMeditation.subtitle)}"
+            android:textColor="@color/detail_text" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

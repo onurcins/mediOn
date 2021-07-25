@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <gradient
+                android:angle="90"
+                android:startColor="#394182"
+                android:endColor="#000000"
+                android:type="linear" />
+        </shape>
+    </item>
+</selector>
+
+<!--<vector-->
+
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:aapt="http://schemas.android.com/aapt"-->
+<!--    android:width="200dp"-->
+<!--    android:height="200dp"-->
+<!--    android:viewportWidth="375"-->
+<!--    android:viewportHeight="1528"-->
+<!--    >-->
+
+<!--    <group>-->
+
+<!--        <group-->
+<!--            android:translateX="0.5"-->
+<!--            android:translateY="-0.03"-->
+<!--            android:pivotX="187.5"-->
+<!--            android:pivotY="764"-->
+<!--            android:scaleX="2.828"-->
+<!--            android:scaleY="2.004"-->
+<!--            android:rotation="90"-->
+<!--            >-->
+
+<!--            <path-->
+<!--                android:pathData="M0 0V1528H375V0"-->
+<!--                >-->
+
+<!--                <aapt:attr name="android:fillColor">-->
+
+<!--                    <gradient-->
+<!--                        android:type="linear"-->
+<!--                        android:startX="93.75"-->
+<!--                        android:startY="764"-->
+<!--                        android:endX="281.25"-->
+<!--                        android:endY="764"-->
+<!--                        >-->
+
+<!--                        <item-->
+<!--                            android:color="#000000"-->
+<!--                            android:offset="0"-->
+<!--                            />-->
+
+<!--                        <item-->
+<!--                            android:color="#3C4D87"-->
+<!--                            android:offset="1"-->
+<!--                            />-->
+
+<!--                    </gradient>-->
+
+<!--                </aapt:attr>-->
+
+<!--            </path>-->
+
+<!--        </group>-->
+
+<!--    </group>-->
+
+<!--</vector>-->

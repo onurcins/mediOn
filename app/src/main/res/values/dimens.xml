@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="side_margin">24dp</dimen>
+    <dimen name="rv_side_margin">16dp</dimen>
+    <dimen name="cell_title_margin">4dp</dimen>
+    <dimen name="cell_side_margin">8dp</dimen>
+</resources>

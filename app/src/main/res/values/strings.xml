@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">MediOn</string>
+    <string name="meditations_title">Meditations</string>
+    <string name="banner_text">Look %s. Pretty, isn\'t it? Perfectly balanced. As all things should be.</string>
+    <string name="stories_title">Stories</string>
+    <string name="ok">OK</string>
+    //Login
+    <string name="sign_in_title">Sign in to MediOn</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="continue_button">CONTINUE</string>
+    <string name="username_err">Username should be longer than two characters</string>
+    <string name="password_err">Password should consist minimum six characters with at least one uppercase character and one number</string>
+    <string name="both_err">Username should be longer than two characters and password should consist minimum six characters with at least one uppercase character and one number</string>
+    <string name="welcome">Welcome to MediOn</string>
+    //
+    <string name="err">Oops, something happened!</string>
+</resources>
