@@ -1,8 +1,8 @@
 package com.onurcinstas.medion.view
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.onurcinstas.medion.R
 import com.onurcinstas.medion.util.App
 
