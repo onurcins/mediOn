@@ -7,7 +7,7 @@ import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import androidx.lifecycle.ViewModelProviders
+import androidx.lifecycle.ViewModelProvider
 import com.onurcinstas.medion.R
 import com.onurcinstas.medion.databinding.ActivityLoginBinding
 import com.onurcinstas.medion.viewmodel.LoginViewModel
@@ -24,18 +24,18 @@ class LoginActivity : AppCompatActivity() {
 
         binding = ActivityLoginBinding.inflate(layoutInflater)
         val view = binding.root
-        viewModel = ViewModelProviders.of(this).get(LoginViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
         viewModel.setStatusBar(this)
         setContentView(view)
 
-        binding.lifecycleOwner = this
-        binding.loginViewModel = viewModel
+        binding.apply {
+            lifecycleOwner = this@LoginActivity
+            login = viewModel
+        }
+
 
         observeLiveData()
 
-        binding.passwordSee.setOnClickListener {
-
-        }
 
     }
 
@@ -88,12 +88,16 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun button(isEnabled: Boolean) {
-        if (!isEnabled) {
-            binding.loginButton.setBackgroundResource(R.drawable.bg_login_button_non_click)
-            binding.loginButton.isEnabled = false
-        } else {
-            binding.loginButton.setBackgroundResource(R.drawable.bg_login_button)
-            binding.loginButton.isEnabled = true
+
+        binding.apply {
+            if (!isEnabled) {
+                loginButton.setBackgroundResource(R.drawable.bg_login_button_non_click)
+                loginButton.isEnabled = false
+            } else {
+                loginButton.setBackgroundResource(R.drawable.bg_login_button)
+                loginButton.isEnabled = true
+            }
         }
+
     }
 }

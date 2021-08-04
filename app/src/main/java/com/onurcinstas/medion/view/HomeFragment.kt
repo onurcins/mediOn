@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.ViewModelProviders
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.onurcinstas.medion.R
 import com.onurcinstas.medion.adapter.HomeAdapter
@@ -34,12 +34,16 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         activity?.window?.statusBarColor = resources.getColor(R.color.black, resources.newTheme())
 
-        viewModel = ViewModelProviders.of(this).get(HomeViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
         viewModel.getDataFromAPI()
 
         adapter = HomeAdapter(requireContext(), arrayListOf())
-        binding.homeRecyclerView.adapter = adapter
-        binding.homeRecyclerView.layoutManager = LinearLayoutManager(context)
+
+        binding.apply {
+            homeRecyclerView.adapter = adapter
+            homeRecyclerView.layoutManager = LinearLayoutManager(context)
+        }
+
 
         observeLiveData()
     }

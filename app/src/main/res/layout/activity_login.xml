@@ -6,7 +6,7 @@
 
 <data>
     <variable
-        name="LoginViewModel"
+        name="login"
         type="com.onurcinstas.medion.viewmodel.LoginViewModel" />
 </data>
 <androidx.constraintlayout.widget.ConstraintLayout
@@ -47,7 +47,7 @@
             android:ems="10"
             android:hint="@string/username"
             android:inputType="textPersonName"
-            android:text="@={LoginViewModel.username}"
+            android:text="@={login.username}"
             android:textColor="@color/text"
             android:textColorHint="@color/text"
             android:textSize="16sp"
@@ -88,7 +88,7 @@
             android:textColor="@color/text"
             android:textColorHint="@color/text"
             android:textSize="16sp"
-            android:text="@={LoginViewModel.password}"
+            android:text="@={login.password}"
             app:layout_constraintBottom_toTopOf="@+id/divider2"
             app:layout_constraintEnd_toStartOf="@+id/passwordSee"
             app:layout_constraintStart_toStartOf="parent"
@@ -112,7 +112,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_eye"
-            android:onClick="@{(v) -> LoginViewModel.passwordSeeClicked(v)}"
+            android:onClick="@{(v) -> login.passwordSeeClicked(v)}"
             />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -126,7 +126,7 @@
         android:background="@drawable/bg_login_button_non_click"
         android:enabled="false"
         android:gravity="center"
-        android:onClick="@{(v) -> LoginViewModel.loginButtonClicked(v)}"
+        android:onClick="@{(v) -> login.loginButtonClicked(v)}"
         android:text="@string/continue_button"
         android:textColor="@color/white"
         android:textStyle="bold"

@@ -58,23 +58,26 @@ class MediaFragment : Fragment() {
             binding.media = MediaFragmentArgs.fromBundle(it).media
         }
 
-        binding.mediaBackButton.setOnClickListener {
-            val action = MediaFragmentDirections.actionMediaFragmentToHomeFragment()
+        binding.apply {
+            mediaBackButton.setOnClickListener {
+                val action = MediaFragmentDirections.actionMediaFragmentToHomeFragment()
 
-            Navigation.findNavController(it).navigate(action)
-        }
-
-        binding.playButtonCons.setOnClickListener {
-            isPlaying = !isPlaying
-            if (isPlaying) {
-                binding.mediaPlayImage.setImageResource(R.drawable.ic_pause)
-                mediaPlayer?.start()
-            } else {
-                binding.mediaPlayImage.setImageResource(R.drawable.ic_play)
-                mediaPlayer?.pause()
+                Navigation.findNavController(it).navigate(action)
             }
 
+            playButtonCons.setOnClickListener {
+                isPlaying = !isPlaying
+                if (isPlaying) {
+                    binding.mediaPlayImage.setImageResource(R.drawable.ic_pause)
+                    mediaPlayer?.start()
+                } else {
+                    binding.mediaPlayImage.setImageResource(R.drawable.ic_play)
+                    mediaPlayer?.pause()
+                }
+
+            }
         }
+
     }
 
     override fun onStop() {
